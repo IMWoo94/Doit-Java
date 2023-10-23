@@ -10,6 +10,7 @@ public class Max3m {
 			max = c;
 
 		return max;
+
 	}
 
 	public static void main(String[] args) {
