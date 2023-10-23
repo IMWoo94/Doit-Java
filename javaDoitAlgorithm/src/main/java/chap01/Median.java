@@ -19,6 +19,17 @@ public class Median {
 		} else {
 			return b;
 		}
+
+		// 위 방식보다 아래 방식으로 사용하게 되면 효율이 떨어진다.
+		// 그 사유는 a 값이 중앙값으로 리턴을 하게 된다하면, 아래 방식은 최소 3개의 식에 대해서 확인을 해야 한다.
+		// 하지만 위 방식의 경우 a 를 도달하기 위해서는 최대 2번의 식만 확인 하면 되므로 효율에 차이가 있다.
+		// if ((b >= a && c <= a) || (b <= a && c >= a)) {
+		// 	return a;
+		// } else if ((a > b && c < b) || (a < b && c > b)) {
+		// 	return b;
+		// } else {
+		// 	return c;
+		// }
 	}
 
 	public static void main(String[] args) {
