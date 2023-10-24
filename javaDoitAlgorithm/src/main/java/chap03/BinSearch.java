@@ -1,5 +1,6 @@
 package chap03;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BinSearch {
@@ -105,5 +106,9 @@ public class BinSearch {
 			System.out.println(ky + " 은 x[" + idxF + "]에 있습니다.");
 			System.out.println(ky + " 은 x[" + idxX + "]에 있습니다.");
 		}
+
+		int searchIndesc = Arrays.binarySearch(x, 9);
+		System.out.println("searchIndesc = " + searchIndesc);
+
 	}
 }
