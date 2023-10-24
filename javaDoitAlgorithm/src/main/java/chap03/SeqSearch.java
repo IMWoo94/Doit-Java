@@ -7,6 +7,16 @@ import java.util.stream.Collectors;
 
 public class SeqSearch {
 
+	static int searchInx(int[] a, int n, int key, int[] idx) {
+		int count = 0;
+		for (int i = 0; i < n; i++) {
+			if (a[i] == key) {
+				idx[count++] = i;
+			}
+		}
+		return count;
+	}
+
 	static int seqSearch(int[] a, int n, int key) {
 		int i = 0;
 
@@ -62,6 +72,14 @@ public class SeqSearch {
 			System.out.println(ky + " 은 x[" + idx + "]에 있습니다.");
 			// System.out.println(ky + " 은 x[" + idxF + "]에 있습니다.");
 			// System.out.println(ky + " 은 x[" + idxU + "]에 있습니다.");
+		}
+
+		int[] result = new int[num];
+		int size = searchInx(x, num, ky, result);
+
+		System.out.println("size = " + size);
+		for (int i : result) {
+			System.out.println("i = " + i);
 		}
 	}
 }
